@@ -22,7 +22,7 @@ export async function action({ request }) {
     password: data.get("password"),
   };
 
-  const response = await fetch("http://localhost:5000/" + mode, {
+  const response = await fetch("/" + mode, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

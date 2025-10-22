@@ -117,11 +117,11 @@ export async function action({ request, params }) {
     description: data.get("description"),
   };
 
-  let url = "http://localhost:5000/events";
+  let url = "/events";
 
   if (method === "PATCH") {
     const eventId = params.eventId;
-    url = "http://localhost:5000/events/" + eventId;
+    url = "/events/" + eventId;
   }
 
   const token = getAuthToken();
