@@ -1,12 +1,12 @@
 const { hash } = require('bcryptjs');
-const { v4: generateId } = require('uuid');
+import { v4 as uuidv4 } from 'uuid';
 
 const { NotFoundError } = require('../util/errors');
 const { readData, writeData } = require('./util');
 
 async function add(data) {
   const storedData = await readData();
-  const userId = generateId();
+  const userId = uuidv4();
   const hashedPw = await hash(data.password, 12);
   if (!storedData.users) {
     storedData.users = [];

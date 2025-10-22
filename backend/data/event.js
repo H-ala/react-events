@@ -1,4 +1,6 @@
-const { v4: generateId } = require('uuid');
+// const { v4: generateId } = require('uuid');
+import { v4 as uuidv4 } from 'uuid';
+
 
 const { NotFoundError } = require('../util/errors');
 const { readData, writeData } = require('./util');
@@ -27,7 +29,7 @@ async function get(id) {
 
 async function add(data) {
   const storedData = await readData();
-  storedData.events.unshift({ ...data, id: generateId() });
+  storedData.events.unshift({ ...data, id: uuidv4() });
   await writeData(storedData);
 }
 
