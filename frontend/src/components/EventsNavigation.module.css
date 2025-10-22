@@ -1,0 +1,49 @@
+.header {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+}
+
+.list a {
+  background-color: var(--color-gray-500);
+  color: var(--color-gray-900);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.list a:hover,
+.list a:active,
+.list a.active {
+  background-color: var(--color-primary-600);
+}
+
+/* تبلت و پایین‌تر */
+@media (max-width: 1024px) {
+  .list a {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* موبایل متوسط */
+@media (max-width: 768px) {
+  .list a {
+    width: 90%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+
+/* موبایل کوچک */
+@media (max-width: 480px) {
+  .list a {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+}

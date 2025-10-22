@@ -1,0 +1,11 @@
+.content {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .content {
+    font-size: 1rem;
+    line-height: 1.2;
+    padding: 0.1rem;
+  }
+}
